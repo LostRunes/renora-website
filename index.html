@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renora Jewellery | Divine Elegance</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader-wrapper">
+        <div class="loader-content">
+            <img src="https://ik.imagekit.io/hiesc7f4v/renora/renoralogo-nobg.png" alt="Renora Logo"
+                class="loader-logo">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="logo">
+                <img src="https://ik.imagekit.io/hiesc7f4v/renora/renoralogo-nobg.png" alt="Renora Logo">
+            </div>
+            <div class="nav-actions">
+                <div class="cart-icon" id="cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+            <h1 class="hero-title">Jewels Inspired by the <br><span class="highlight">Goddess in You</span></h1>
+            <p class="hero-subtitle">Timeless elegance. Divine beauty. Crafted for your radiance.</p>
+            <div class="hero-btns">
+                <a href="#collection" class="btn btn-primary">Explore Collection</a>
+                <a href="#collection" class="btn btn-outline">Shop Now</a>
+            </div>
+        </div>
+        <div class="floating-jewellery">
+            <img src="assets/rose_gold_necklace_1772968772942.png" alt="Featured Jewellery" id="hero-jewellery">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Collection Section -->
+        <section id="collection" class="collection-section reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Divine <span class="highlight">Collection</span></h2>
+                    <p class="section-subtitle">Exquisite pieces for your breathtaking aura.</p>
+                </div>
+
+                <!-- Search & Filters -->
+                <div class="collection-controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="product-search" placeholder="Search jewellery...">
+                    </div>
+                </div>
+
+                <!-- Filter System -->
+                <div class="filter-system">
+                    <div class="filter-group">
+                        <span class="filter-label">Category</span>
+                        <div class="filter-options" id="type-filters">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="Rings">Rings</button>
+                            <button class="filter-btn" data-filter="Earrings">Earrings</button>
+                            <button class="filter-btn" data-filter="Pendant">Pendants</button>
+                            <button class="filter-btn" data-filter="Necklaces">Necklaces</button>
+                            <button class="filter-btn" data-filter="Bracelets">Bracelets</button>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <span class="filter-label">Material</span>
+                        <div class="filter-options" id="material-filters">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="Rose Gold">Rose Gold</button>
+                            <button class="filter-btn" data-filter="Oxidised">Oxidised</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="product-grid" id="product-grid">
+                    <!-- Products will be injected here by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section reveal">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">The Essence of <span class="highlight">Renora</span></h2>
+                        <p>Renora Jewellery celebrates divine feminine elegance. Inspired by goddess-like beauty and
+                            timeless craftsmanship, every piece is designed to enhance your radiance.</p>
+                        <p>Every creation is a testament to our commitment to luxury and eternal beauty.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="assets/elegant_pendant_goddess_style_1772968821347.png" alt="Renora Luxury">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Section -->
+        <section id="instagram" class="instagram-section reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Follow the <span class="highlight">Goddess</span></h2>
+                    <p class="section-subtitle">Join our journey on Instagram @renora.jewellery</p>
+                </div>
+                <div class="instagram-grid">
+                    <div class="insta-item"><img src="assets/rose_gold_diamond_ring_1772968757245.png" alt="Insta 1">
+                    </div>
+                    <div class="insta-item"><img src="assets/rose_gold_necklace_1772968772942.png" alt="Insta 2"></div>
+                    <div class="insta-item"><img src="assets/oxidised_silver_earrings_luxury_1772968788267.png"
+                            alt="Insta 3"></div>
+                    <div class="insta-item"><img src="assets/rose_gold_bracelet_divine_1772968804984.png" alt="Insta 4">
+                    </div>
+                    <div class="insta-item"><img src="assets/elegant_pendant_goddess_style_1772968821347.png"
+                            alt="Insta 5"></div>
+                    <div class="insta-item"><img src="assets/rose_gold_diamond_ring_1772968757245.png" alt="Insta 6">
+                    </div>
+                </div>
+                <div class="insta-btn-container">
+                    <a href="https://www.instagram.com/renora.jewellery/" target="_blank" class="btn btn-outline">Follow
+                        Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section reveal">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2 class="section-title">Connect with <span class="highlight">Us</span></h2>
+                        <p>For custom orders, enquiries, or support, reach out to us through our social channels.</p>
+                        <div class="contact-links">
+                            <a href="https://www.instagram.com/renora.jewellery/" class="contact-link"><i
+                                    class="fab fa-instagram"></i> Instagram</a>
+                            <a href="https://wa.me/918455894907" class="contact-link"><i class="fab fa-whatsapp"></i>
+                                WhatsApp Support</a>
+                            <a href="mailto:support@renora.com" class="contact-link"><i class="fas fa-envelope"></i>
+                                Order Enquiries</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <img src="https://ik.imagekit.io/hiesc7f4v/renora/renoralogo-nobg.png" alt="Renora Footer Logo">
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#collection">Collection</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/renora.jewellery/"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/918455894907"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p class="copyright">&copy; <span id="year"></span> Renora Jewellery. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkout-modal">
+        <div class="modal-content checkout-modal-content">
+            <span class="close-modal" id="close-checkout">&times;</span>
+            <div class="checkout-body">
+                <h2 class="section-title">Complete Your <span class="highlight">Purchase</span></h2>
+                <div class="checkout-details">
+                    <div class="payment-instruction">
+                        <p>Scan the QR using any UPI app and complete payment. After payment, upload screenshot for
+                            order confirmation.</p>
+                        <div class="upi-info">
+                            <strong>UPI ID:</strong> <span>8455894907@ptsbi</span>
+                        </div>
+                    </div>
+                    <div class="qr-code">
+                        <!-- Generic Placeholder QR for UPI -->
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=8455894907@ptsbi&pn=Renora%20Jewellery"
+                            alt="UPI QR Code">
+                    </div>
+                    <div class="order-summary-checkout">
+                        <h3>Order Total: <span id="checkout-total">₹ 0</span></h3>
+                        <a href="https://wa.me/918455894907" target="_blank" class="btn btn-primary">Confirm via
+                            WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Bag</h3>
+            <div class="close-cart" id="close-cart"><i class="fas fa-times"></i></div>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items injected here -->
+            <div class="empty-cart-msg">Your bag is empty</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">₹ 0</span>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <div class="modal-body" id="modal-body">
+                <!-- Product details injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
