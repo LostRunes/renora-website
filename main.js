@@ -127,16 +127,25 @@ function initMobileMenu() {
 
 // --- Parallax Effect ---
 function initParallax() {
-    const hero = document.querySelector('.hero');
-    const jewellery = document.getElementById('hero-jewellery');
 
-    if (hero && jewellery) {
-        hero.addEventListener('mousemove', (e) => {
-            const x = (window.innerWidth / 2 - e.pageX) / 30;
-            const y = (window.innerHeight / 2 - e.pageY) / 30;
-            jewellery.style.transform = `translate(${x}px, ${y}px) rotate(${x / 2}deg)`;
-        });
-    }
+    const bg = document.querySelector(".hero-bg");
+    const content = document.querySelector(".hero-content");
+    const canvas = document.getElementById("hero-canvas");
+
+    window.addEventListener("scroll", () => {
+
+        const scroll = window.scrollY;
+        if (bg) {
+            bg.style.transform = `translateY(${scroll * 0.45}px)`;
+        }
+        if (canvas) {
+            canvas.style.transform = `translateY(${scroll * 0.55}px)`;
+        }
+        if (content) {
+            content.style.transform = `translateY(${scroll * 0.12}px)`;
+        }
+
+    });
 }
 
 // --- Scroll Reveal ---
@@ -152,6 +161,25 @@ function reveal() {
         }
     });
 }
+
+const leftRing = document.querySelector(".left-ring img");
+const rightRing = document.querySelector(".right-ring img");
+
+window.addEventListener("scroll", () => {
+
+    const scroll = window.scrollY;
+
+    if(leftRing){
+        leftRing.style.transform =
+        `translateY(${-scroll * 0.55}px) scale(${1 + scroll*0.0004}) rotate(-20deg)`;
+    }
+
+    if(rightRing){
+        rightRing.style.transform =
+        `translateY(${-scroll * 1.03}px) scale(${1 + scroll*0.0004}) rotate(15deg)`;
+    }
+
+});
 
 // --- Product Rendering ---
 function renderProducts() {
