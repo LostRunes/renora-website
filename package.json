@@ -1,0 +1,21 @@
+{
+  "name": "renora-website",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LostRunes/renora-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LostRunes/renora-website/issues"
+  },
+  "homepage": "https://github.com/LostRunes/renora-website#readme",
+  "description": ""
+}
