@@ -41,10 +41,10 @@ app.get("/products", async (req,res) => {
 });
 
 // POST API
-app.post("/add-product", upload.single("image"), async (req, res) => {
+app.post("/add-product/", upload.single("image"), async (req, res) => {
 
-  console.log("BODY:", req.body);
-  console.log("FILE:", req.file);
+  // console.log("BODY:", req.body);
+  // console.log("FILE:", req.file);
 
   try {
 
@@ -76,6 +76,106 @@ app.post("/add-product", upload.single("image"), async (req, res) => {
   }
 
 });
+
+// app.put("/update-product/:id", upload.single("image"), async (req, res) => {
+
+//   try {
+
+//     const updateData = {
+//       name: req.body.name,
+//       price: Number(req.body.price),
+//       type: req.body.type,
+//       material: req.body.material,
+//       description: req.body.description
+//     };
+
+//     // update image if new one uploaded
+//     if (req.file) {
+//       updateData.image = req.file.path;
+//     }
+
+//     const updatedProduct = await Product.findByIdAndUpdate(
+//       req.params.id,
+//       updateData,
+//       { new: true }
+//     );
+
+//     res.json({
+//       message: "Product updated successfully",
+//       product: updatedProduct
+//     });
+
+//   } catch (error) {
+
+//     console.error(error);
+
+//     res.status(500).json({
+//       error: "Update failed"
+//     });
+
+//   }
+
+// });
+
+app.put("/update-product/:id", upload.single("image"), async (req, res) => {
+
+  try {
+
+    const product = await Product.findById(req.params.id);
+
+    if (!product) {
+      return res.status(404).json({ message: "Product not found" });
+    }
+
+    // Update only if value is provided
+    product.name = req.body.name || product.name;
+    product.price = req.body.price || product.price;
+    product.type = req.body.type || product.type;
+    product.material = req.body.material || product.material;
+    product.description = req.body.description || product.description;
+
+    // Update image only if new one uploaded
+    if (req.file) {
+      //product.image = req.file.path;
+      updateData.image = req.file.path;
+    }
+
+    await product.save();
+
+    res.json({
+      message: "Product updated successfully",
+      product
+    });
+
+  } catch (error) {
+
+    console.error(error);
+
+    res.status(500).json({
+      error: "Update failed"
+    });
+
+  }
+
+});
+
+app.delete("/delete-product/:id", async (req,res)=>{
+
+  try{
+
+    await Product.findByIdAndDelete(req.params.id);
+
+    res.json({message:"Product deleted successfully"});
+
+  }catch(err){
+
+    res.status(500).json({error:"Delete failed"});
+
+  }
+
+});
+
+
 
 app.listen(5000,() => {
     console.log("Server running on port 5000");

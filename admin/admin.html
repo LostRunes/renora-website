@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Renora Admin Panel</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Renora Admin Dashboard</h1>
+
+<!-- ADD PRODUCT -->
+<div class="card">
+
+<h2>Add Product</h2>
+
+<form id="addForm">
+
+<input type="text" id="name" placeholder="Product Name" required>
+
+<input type="number" id="price" placeholder="Price" required>
+
+<input type="text" id="type" placeholder="Type" required>
+
+<input type="text" id="material" placeholder="Material" required>
+
+<textarea id="description" placeholder="Description" required></textarea>
+
+<input type="file" id="image">
+
+<button type="submit">Add Product</button>
+
+</form>
+
+</div>
+
+
+<!-- UPDATE PRODUCT -->
+
+<div class="card">
+
+<h2>Update Product</h2>
+
+<input type="text" id="updateId" placeholder="Product ID">
+
+<input type="text" id="updateName" placeholder="New Name">
+
+<input type="number" id="updatePrice" placeholder="New Price">
+
+<input type="text" id="updateType" placeholder="Type">
+
+<input type="text" id="updateMaterial" placeholder="Material">
+
+<textarea id="updateDescription" placeholder="Description"></textarea>
+
+<input type="file" id="updateImage">
+
+<button onclick="updateProduct()">Update Product</button>
+
+</div>
+
+
+<!-- DELETE PRODUCT -->
+
+<div class="card">
+<h2>Delete Product</h2>
+<input type="text" id="deleteId" placeholder="Product ID">
+<button onclick="deleteProduct()" class="deleteBtn">
+Delete Product
+</button>
+</div>
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
